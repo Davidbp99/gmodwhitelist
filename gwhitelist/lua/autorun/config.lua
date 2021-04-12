@@ -15,7 +15,7 @@ gwhitelist.config.welcomemessage = "Looks like you are whitelisted"
 
 gwhitelist.config.whitelist = { -- list who should be allowed to enter after they entered the server password or at all.
 
-["STEAM_0:0:0"] = true, --//SteamID of any player on a singleplayer server. Keep this here if you dont want the whitelist system to block you from joining singleplayer
+--["STEAM_0:0:0"] = true, --//SteamID of any player on a singleplayer server. Keep this here if you dont want the whitelist system to block you from joining singleplayer (not needed as we got if (game.SinglePlayer() == false) then)
 }
 
 gwhitelist.config.whitelistgroup = {
