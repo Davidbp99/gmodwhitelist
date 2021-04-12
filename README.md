@@ -10,6 +10,7 @@ gwhitelist.config.active = false -- If this is false then whitelist is not activ
 
 ## Kick Message
 In the config file you can set what users will be told if they try and connect and is not on the whitelist or is on the blacklist.
+
 ![image](https://user-images.githubusercontent.com/40523727/114456064-ba8f5c80-9bdc-11eb-81b0-444d5641dd7f.png)
 ![image](https://user-images.githubusercontent.com/40523727/114458001-f62b2600-9bde-11eb-97f6-22db9f3abf4e.png)
 
