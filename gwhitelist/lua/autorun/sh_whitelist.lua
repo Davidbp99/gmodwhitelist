@@ -1,8 +1,9 @@
-gwhitelist = {} or gwhitelist
+gwhitelist = gwhitelist or {} 
 
 --// Console Printing.
+local PrefixColor = Color(200, 50, 255)
 function gwhitelist:Print(message) -- just making most text good looking via the console
-  local PrefixColor = Color(200, 50, 255)
+  
   if SERVER then
     PrefixColor = Color(100, 70, 255)
   end
@@ -12,7 +13,7 @@ function gwhitelist:Print(message) -- just making most text good looking via the
   MsgC(Color(255, 255, 255), "\n")
 end
 // Sub-Tables
-gwhitelist.config = {} or gwhitelist.config
+gwhitelist.config = gwhitelist.config or {}
 include("autorun/config.lua") gwhitelist:Print("config.lua loaded") -- it loads the config file.
 
 hook.Add("CheckPassword", "whitelist", function(steamID64)
