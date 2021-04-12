@@ -5,9 +5,11 @@ Need easy to use whitelist system? That just you with file access can enable, di
 Go to the easy to use config file and look for:
 
 ```lua
-gwhitelist.config.active = false -- If this is false then whitelist is not active <- turn this to true to turn it on
-```
+gwhitelist.config.active = false -- If this is false then whitelist is not active. If you got gwhitelist.config.activegroup set to true then this won't run. As the group is checked on another hook
 
+gwhitelist.config.activegroup = false -- If this is false then whitelistgroup is not active.
+```
+Set one of them to true
 ## Kick Message
 In the config file you can set what users will be told if they try and connect and is not on the whitelist or is on the blacklist.
 
