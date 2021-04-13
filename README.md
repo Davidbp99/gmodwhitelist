@@ -1,6 +1,9 @@
 # gmodwhitelist
 Need easy to use whitelist system? That just you with file access can enable, disable, blacklist and whitelist users? Then you have got to the correct place.
 
+## What is gWhitelist?
+gWhitelist is an addon that blocks users to join or fully connect to the server if you got it activated (view config on how to activate it). It is used to have a more private beta or have the server in dev mode without the pain that someone might crack or leak the password to the server. gWhitelist is not a job whitelist system
+
 ## Where do I active the whitelist?
 Go to the easy to use config file and look for:
 
