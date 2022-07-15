@@ -28,6 +28,15 @@ gWhitelist.Config.BlackListMessage = "You are on a blacklist. You can get back o
 gWhitelist.Config.NotonWhitelistGroup = "You are not on the whitelist or your group is not on the whitelist"
 
 gWhitelist.Config.WelcoMessage = "Looks like you are whitelisted"
+gWhitelist.Config.WhitelistCommandAccess = {
+--["superadmin"] = true,
+
+}
+
+gWhitelist.Config.WhitelistCommandGroupAccess = {
+--["superadmin"] = true,
+
+}
 
 gWhitelist.Config.Whitelist = { -- list who should be allowed to enter after they entered the server password or at all.
 

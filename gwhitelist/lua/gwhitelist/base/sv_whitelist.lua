@@ -58,7 +58,7 @@ hook.Add( "PlayerInitialSpawn", "gWhitelist.RunsWhitelistGroup", function( ply )
 end)
 
 hook.Add("PlayerSay", "gWhitelist.EnableOrDisableWhitelist", function(ply, text)
-    if text:lower() == gWhitelist.Config.Command and (ply:IsSuperAdmin()) then
+    if text:lower() == gWhitelist.Config.Command and (gWhitelist.Config.WhitelistCommandAccess[ply:GetUserGroup()] == true) then
         if gWhitelist.Config.Active == false then
             gWhitelist.Config.Active = true
             net.Start("gWhitelist")
@@ -81,7 +81,7 @@ hook.Add("PlayerSay", "gWhitelist.EnableOrDisableWhitelist", function(ply, text)
 end)
 
 hook.Add("PlayerSay", "gWhitelist.EnableOrDisableWhitelistGroup", function(ply, text)
-    if text:lower() == gWhitelist.Config.commandGroup and (ply:IsSuperAdmin()) then
+    if text:lower() == gWhitelist.Config.commandGroup and (gWhitelist.Config.WhitelistCommandGroupAccess[ply:GetUserGroup()] == true) then
         if gWhitelist.Config.ActiveGroup == false then
             gWhitelist.Config.ActiveGroup = true
             net.Start("gWhitelist")
