@@ -61,6 +61,7 @@ hook.Add("PlayerSay", "gWhitelist.EnableOrDisableWhitelist", function(ply, text)
     if text:lower() == gWhitelist.Config.Command and (gWhitelist.Config.WhitelistCommandAccess[ply:GetUserGroup()] == true) then
         if gWhitelist.Config.Active == false then
             gWhitelist.Config.Active = true
+            gWhitelist.Config.ActiveGroup = false -- you can't have both true sadly.
             net.Start("gWhitelist")
 
             net.WriteTable({Color(200, 50, 150), "gWhitelist | ", ply:Nick() .. " Have turned whitelist mode"})
@@ -84,6 +85,7 @@ hook.Add("PlayerSay", "gWhitelist.EnableOrDisableWhitelistGroup", function(ply, 
     if text:lower() == gWhitelist.Config.commandGroup and (gWhitelist.Config.WhitelistCommandGroupAccess[ply:GetUserGroup()] == true) then
         if gWhitelist.Config.ActiveGroup == false then
             gWhitelist.Config.ActiveGroup = true
+            gWhitelist.Config.Active = false -- as you can't have both on sadly
             net.Start("gWhitelist")
 
             net.WriteTable({Color(200, 50, 150), "gWhitelist | ", ply:Nick() .. " Have turned whitelist user group on"})
